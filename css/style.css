@@ -62,6 +62,15 @@ body {
   grid-column: full-start/col-end 6;
 }
 
+.logo {
+  display: block;
+  margin-bottom: 8rem;
+}
+.logo__img {
+  display: block;
+  margin: 0 auto;
+}
+
 .features {
   padding: 15rem 0;
   background-color: #F5F5F5;
@@ -274,6 +283,34 @@ body {
 .footer {
   background-color: #101D2C;
   grid-column: full-start/full-end;
+  padding: 8rem 3rem;
+  border-top: 0.3rem solid #F5F5F5;
+}
+
+.nav__list {
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  justify-items: center;
+  grid-gap: 3.5rem;
+}
+.nav__link:link, .nav__link:visited {
+  font-size: 1.6rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: #F5F5F5;
+  text-decoration: none;
+  text-align: center;
+  -webkit-transition: 0.3s all;
+  -o-transition: 0.3s all;
+  transition: 0.3s all;
+  display: inline-block;
+}
+.nav__link:hover, .nav__link:active {
+  color: #425844;
+  -webkit-transform: translateY(-0.3rem);
+      -ms-transform: translateY(-0.3rem);
+          transform: translateY(-0.3rem);
 }
 
 .btn {
