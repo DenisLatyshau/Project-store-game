@@ -147,6 +147,37 @@ body {
   background-color: #425844;
   grid-column: sidebar-start/sidebar-end;
   grid-row: 1/-1;
+  padding-top: 3.7rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.hamburger {
+  border: none;
+  background-color: #F5F5F5;
+  height: 0.2rem;
+  width: 4.5rem;
+}
+.hamburger::before, .hamburger::after {
+  content: "";
+  background-color: #F5F5F5;
+  height: 0.2rem;
+  width: 4.5rem;
+  display: block;
+}
+.hamburger::before {
+  -webkit-transform: translateY(-1.5rem);
+      -ms-transform: translateY(-1.5rem);
+          transform: translateY(-1.5rem);
+}
+.hamburger::after {
+  -webkit-transform: translateY(1.5rem);
+      -ms-transform: translateY(1.5rem);
+          transform: translateY(1.5rem);
 }
 
 .gallery {
