@@ -146,6 +146,31 @@ body {
 .gamers {
   background-color: #101D2C;
   grid-column: col-start 7/full-end;
+  display: grid;
+  grid-template-columns: -webkit-min-content -webkit-max-content;
+  grid-template-columns: min-content max-content;
+  grid-gap: 4rem 2rem;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.gamers__title {
+  grid-column: 1/-1;
+  justify-self: center;
+}
+.gamers__img {
+  width: 7rem;
+}
+.gamers__text {
+  -ms-flex-item-align: center;
+      align-self: center;
+}
+.gamers__score {
+  font-size: 1.6rem;
+  color: #AAAAAA;
+  font-weight: 300;
 }
 
 .banner-img {
@@ -314,7 +339,7 @@ body {
 .card__title {
   grid-column: 1/-1;
   grid-row: 1/2;
-  padding: 1.5rem 11.5rem;
+  padding: 1.5rem 1.5rem;
   background-color: #425844;
   font-size: 1.6rem;
   font-weight: 700;
