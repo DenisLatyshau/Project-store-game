@@ -13,6 +13,11 @@ html {
     font-size: 50%;
   }
 }
+@media only screen and (max-width: 440px) {
+  html {
+    font-size: 40%;
+  }
+}
 
 body {
   font-family: "Montserrat", sans-serif;
@@ -35,6 +40,12 @@ body {
     grid-template-rows: 6rem 80vh min-content 40vw repeat(3, min-content);
     grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(-webkit-min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
     grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+  }
+}
+@media only screen and (max-width: 830px) {
+  .container {
+    grid-template-rows: 6rem calc(100vh - 6rem) -webkit-min-content -webkit-min-content -webkit-min-content 50vw repeat(3, -webkit-min-content);
+    grid-template-rows: 6rem calc(100vh - 6rem) min-content min-content min-content 50vw repeat(3, min-content);
   }
 }
 
@@ -77,6 +88,16 @@ body {
   grid-template-rows: 1fr -webkit-min-content minmax(10rem, -webkit-min-content) 1fr;
   grid-template-rows: 1fr min-content minmax(10rem, min-content) 1fr;
   background: url(../img/header-bg.png) center/cover no-repeat;
+}
+@media only screen and (max-width: 830px) {
+  .header {
+    grid-column: full-start/full-end;
+  }
+}
+@media only screen and (max-width: 440px) {
+  .header {
+    padding: 4rem 3rem 5rem 3rem;
+  }
 }
 .header__btn {
   -ms-flex-item-align: start;
@@ -134,6 +155,11 @@ body {
       -ms-flex-align: start;
           align-items: start;
 }
+@media only screen and (max-width: 440px) {
+  .features {
+    padding: 5rem 0;
+  }
+}
 
 .feature {
   display: grid;
@@ -160,14 +186,35 @@ body {
   background-color: #101D2C;
   grid-column: col-start 7/full-end;
   display: grid;
-  grid-template-columns: -webkit-min-content -webkit-max-content;
-  grid-template-columns: min-content max-content;
+  grid-template-columns: -webkit-max-content;
+  grid-template-columns: max-content;
   grid-gap: 4rem 2rem;
   -ms-flex-line-pack: center;
       align-content: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+@media only screen and (max-width: 830px) {
+  .gamers {
+    grid-column: 1/-1;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    justify-items: center;
+    padding: 5rem 0;
+  }
+}
+@media only screen and (max-width: 440px) {
+  .gamers {
+    grid-template-columns: -webkit-min-content;
+    grid-template-columns: min-content;
+    justify-items: start;
+  }
+}
+.gamers__box {
+  display: grid;
+  grid-template-columns: -webkit-max-content -webkit-max-content;
+  grid-template-columns: max-content max-content;
+  grid-column-gap: 2rem;
 }
 .gamers__title {
   grid-column: 1/-1;
@@ -194,10 +241,20 @@ body {
   grid-template-rows: repeat(24, 1fr);
   background: url(../img/banner-background.png) center/cover no-repeat;
 }
+@media only screen and (max-width: 830px) {
+  .banner-img {
+    grid-column: 1/-1;
+  }
+}
 .banner-img__img-1 {
   width: 100%;
   grid-column: 3/15;
   grid-row: 3/12;
+}
+@media only screen and (max-width: 830px) {
+  .banner-img__img-1 {
+    grid-column: 2/10;
+  }
 }
 .banner-img__img-2 {
   width: 100%;
@@ -207,6 +264,11 @@ body {
       -ms-transform: translateX(3.5rem);
           transform: translateX(3.5rem);
 }
+@media only screen and (max-width: 830px) {
+  .banner-img__img-2 {
+    grid-column: 8/15;
+  }
+}
 .banner-text {
   background-color: #101D2C;
   grid-column: col-start 5/full-end;
@@ -214,7 +276,13 @@ body {
   -ms-flex-line-pack: center;
       align-content: center;
   justify-items: start;
-  padding: 0 5vw;
+  padding: 4rem;
+}
+@media only screen and (max-width: 830px) {
+  .banner-text {
+    grid-column: 1/-1;
+    grid-row: 5/6;
+  }
 }
 .banner-text__text {
   margin-bottom: 4rem;
@@ -349,6 +417,11 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   grid-gap: 4rem 6rem;
   padding: 15rem 0;
+}
+@media only screen and (max-width: 440px) {
+  .cards {
+    padding: 5rem 0;
+  }
 }
 
 .card {
